@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="phUn0nscftmFH51mv3x5" name="ページ1">
-        <mxGraphModel dx="551" dy="723" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="692" dy="834" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -13,7 +13,7 @@
                 <mxCell id="4" value="Items" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
                     <mxGeometry x="460" y="160" width="160" height="180" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="item_name&#10;description&#10;category_id&#10;price&#10;prefecture_id" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="4" vertex="1">
+                <mxCell id="5" value="item_name&#10;description&#10;category_id&#10;status_id&#10;delivery_charge_id&#10;days_up_to_delivery_id&#10;price&#10;user&#10;prefecture_id" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="4" vertex="1">
                     <mxGeometry y="30" width="160" height="150" as="geometry"/>
                 </mxCell>
                 <mxCell id="6" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmany;exitX=1;exitY=0.25;exitDx=0;exitDy=0;targetPerimeterSpacing=5;sourcePerimeterSpacing=5;endSize=5;startSize=5;strokeWidth=3;startArrow=ERone;startFill=0;" parent="1" source="3" edge="1">
@@ -36,7 +36,7 @@
                 <mxCell id="17" value="addresses" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
                     <mxGeometry x="270" y="540" width="160" height="190" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" value="item_name&#10;price&#10;image&#10;derivery_charge&#10;postal_code&#10;prefecture&#10;city&#10;block&#10;building&#10;phone_number" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="17" vertex="1">
+                <mxCell id="18" value="postal_code&#10;prefecture_id&#10;city&#10;block&#10;building&#10;phone_number" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="17" vertex="1">
                     <mxGeometry y="30" width="160" height="160" as="geometry"/>
                 </mxCell>
                 <mxCell id="22" value="" style="fontSize=12;html=1;endArrow=ERone;endFill=1;startSize=5;endSize=5;sourcePerimeterSpacing=5;targetPerimeterSpacing=5;strokeWidth=3;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;" parent="1" source="11" target="5" edge="1">
