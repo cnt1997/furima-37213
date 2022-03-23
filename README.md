@@ -6,7 +6,7 @@ application up and running.
 Things you may want to cover:
 
 ## usersテーブル
-|Column|Type|Options|
+|Column             |Type    |Options                  |
 |-------------------|--------|-------------------------|
 |nickname           |string  |null: false              |
 |email              |string  |null: false, unique: true|
@@ -54,6 +54,7 @@ Things you may want to cover:
 |Column       |Type       |Options    |
 |-------------|-----------|-----------|
 |postal_code  |string     |null: false|
+|prefecture_id|integer    |null: false|
 |city         |string     |null: false|
 |block        |string     |null: false|
 |building     |string     |           |
