@@ -49,17 +49,32 @@ RSpec.describe User, type: :model do
       end
 
       it "パスワードが５文字以下だと登録できない" do 
-        @user.password = Faker::Internet.password(max_length: 1,min_length: 5)
+        @user.password = Faker::Internet.password(min_length: 1,max_length: 5)
         @user.password_confirmation = @user.password
         @user.valid?
-        expect(@user.errors.full_messages).to include("Password is too short (minimum is 6 characters)")
+        binding.pry
+        expect(@user.errors.full_messages).to include("Password is too short (minimum is 6 characters)", "Password is invalid")
       end
 
-      it "パスワードに半角英数字が含まれていなければ登録できない" do 
+      it "英字のみのパスワードでは登録できない" do
         @user.password = "aaaaaaaaaa"
         @user.password_confirmation = @user.password
         @user.valid?
         expect(@user.errors.full_messages).to include("Password is invalid")
+      end
+
+      it "数字のみのパスワードでは登録できない" do
+        @user.password = "111111"
+        @user.password_confirmation = @user.password
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Password is invalid")
+      end
+
+      it "全角文字を含むパスワードでは登録できない" do 
+        @user.password = "あああ11111"
+        @user.password_confirmation = @user.password
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Password is invalid")        
       end
 
       it "passwordとpassword_confirmationが不一致では登録できない" do 

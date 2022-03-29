@@ -4,10 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   VALID_PASSWORD = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
-  VALID_NAME = /\A[ぁ-んァ-ン一-龥]/
+  VALID_NAME = /\A[ぁ-んァ-ン一-龥々ー]+\z/
   VALID_KATAKANA = /\A[ァ-ヶー－]+\z/
 
-  validates :password,           presence: true, format: {with: VALID_PASSWORD}
+  validates :password,           format: {with: VALID_PASSWORD}
   validates :nickname,           presence: true 
   validates :familyname,         presence: true, format: {with: VALID_NAME} 
   validates :firstname,          presence: true, format: {with: VALID_NAME}
