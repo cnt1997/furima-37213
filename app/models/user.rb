@@ -14,4 +14,6 @@ class User < ApplicationRecord
   validates :familyname_katakana,presence: true, format: {with: VALID_KATAKANA}
   validates :firstname_katakana, presence: true, format: {with: VALID_KATAKANA}
   validates :birthday,           presence: true
+
+  has_many :items
 end
