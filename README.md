@@ -8,9 +8,9 @@ Things you may want to cover:
 ## usersテーブル
 |Column             |Type    |Options                  |
 |-------------------|--------|-------------------------|
-|nickname           |string  |null: false              |
 |email              |string  |null: false, unique: true|
 |encrypted_password |string  |null: false              |
+|nickname           |string  |null: false              |
 |familyname         |string  |null: false              |
 |firstname          |string  |null: false              |
 |familyname_katakana|string  |null: false              |
