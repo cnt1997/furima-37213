@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-  extend ActiveHash::Associatons::ActiveRecordExtensions
+  extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
   belongs_to :status
   belongs_to :delivery_charge
@@ -13,7 +13,7 @@ class Item < ApplicationRecord
   validates :delivery_charge_id,        presence: true,   numericality: { other_than: 1, message: "can't be blank"}
   validates :days_up_to_delivery_id,    presence: true,   numericality: { other_than: 1, message: "can't be blank"}
   validates :price,                     presence: true
-  validates :user,                      presence: true,   foreign_key: true
+  validates :user,                      presence: true
   validates :prefecture_id,             presence: true,   numericality: { other_than: 1, message: "can't be blank"}
 
   belongs_to :user
