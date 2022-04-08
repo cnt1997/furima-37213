@@ -51,7 +51,6 @@ RSpec.describe User, type: :model do
         @user.password = Faker::Internet.password(min_length: 1,max_length: 5)
         @user.password_confirmation = @user.password
         @user.valid?
-        binding.pry
         expect(@user.errors.full_messages).to include("Password is too short (minimum is 6 characters)", "Password is invalid")
       end
 
