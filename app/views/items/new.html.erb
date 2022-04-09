@@ -22,6 +22,7 @@
           クリックしてファイルをアップロード
         </p>
         <%= f.file_field :image, id:"item-image" %>
+        <%= image_tag @item.image.variant(resize: '500x500') if @item.image.attached?%>
       </div>
     </div>
 
