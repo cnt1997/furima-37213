@@ -6,6 +6,6 @@ FactoryBot.define do
     block               {'千代田区'}
     building            {'newタウンビル'}
     phone_number        {'1234567890'}
-
+    token               {"sk_test_000000000000000"}
   end
 end
