@@ -4,7 +4,6 @@ class OrdersController < ApplicationController
   before_action :move_to_index
 
   def index
-    @item = Item.find(params[:item_id])
     @order_address = OrderAddress.new
   end
 
@@ -26,6 +25,7 @@ class OrdersController < ApplicationController
   end
 
   def set_item
+    @item = Item.find(params[:item_id]) 
   end
 
   def move_to_index
@@ -44,7 +44,4 @@ class OrdersController < ApplicationController
       currency: 'jpy'
     )
   end
-  
-
-
 end
